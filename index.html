@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Demo WebRTC</title>
+        <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+        <script src="peer.min.js"></script>
+        <script src="socket.io.js"></script>
+        <style>
+            h1{
+                text-align: center;
+            }
+            #btn-call{
+                float: left;
+            }
+            #right{
+                float: right;
+                width: 30%;
+                text-align: center;
+            }
+            #boxtitle{
+                background-color: #f0f2d0;
+                border: 3px solid #900;
+                font-weight: bold;
+            }
+            #boxcontent{
+                height: 400px;
+                border: 2px solid;
+            border-top: none;
+            padding: 5px;
+            text-align: center;
+            font-weight: bold;
+            overflow-x:hidden;
+            overflow-y:auto;
+            }
+            li { padding: 5px 10px; width: auto ; list-style: none;}
+            li:nth-child(odd) { background: #eee; }
+            #onl{
+                float: right;
+                margin-right: 170px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>DEMO-VIDEO-CALL</h1>
+        
+        <div id="btn-call">
+            <div id="idStream">Id : </div>
+            <div id="name">Name :  </div>
+            <video id="localStream" width="300" controls></video>
+            <br /><br />
+            <div id="answer_user">
+                <video id="remoteStream" width="300" controls></video>
+                <br /><br />
+            </div>
+            <input type="text" id="remoteId" placeholder="remoteId">
+            <button id="btnCall">Call</button>
+        </div>
+        <div id="right">
+                
+                <div id="boxtitle">User online</div>
+                <div id="boxcontent">
+
+                </div>
+                <!-- <button id="on">hiển thị</button> -->
+        </div>
+        </div>
+        <div id="btn-login">
+            <input type="text" id="txtusername" placeholder="Your name">
+            <button id="btnsign">sign</button>
+        </div>
+    </body>
+    <script src="main.js"></script>
+</html>
+<!-- 
+    Name: demo-RTC
+    Copyright: thanhphong312
+    Author: thanhphong312
+    Date: 26/04/20 23:08
+    Description: demo
+ -->
